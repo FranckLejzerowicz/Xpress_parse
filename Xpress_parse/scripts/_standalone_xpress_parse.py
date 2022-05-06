@@ -17,7 +17,7 @@ from Xpress_parse import __version__
     "-i", "--i-records", multiple=True, help="Path(s) to WoS search result(s)")
 @click.option(
     "-o", "--o-output", default=None, type=str,
-    help="Selected records (default to xpress_records_YYYY-MM-DD.tsv)")
+    help="Selected records (default: <input>_xpressed_YYYYMMDD.tsv)")
 @click.option(
     "-u", "--p-user", multiple=True, default=None, help="User name(s)")
 @click.option(
