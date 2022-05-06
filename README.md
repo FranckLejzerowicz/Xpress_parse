@@ -21,7 +21,7 @@ searching on SRA and EBI if one is looking for papers with sequences.
 
 ## Install
 ```
-pip install Xpress_parse
+pip install Xpress-parse
 ```
 or
 ```
