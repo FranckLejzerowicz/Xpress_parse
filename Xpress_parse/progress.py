@@ -9,7 +9,7 @@
 import json
 import glob
 import hashlib
-from os.path import dirname, isdir
+from os.path import abspath, dirname, isdir
 
 
 def get_progress_files(
@@ -54,7 +54,7 @@ def get_progress_base(args: dict) -> str:
         for the currently parsed WoS searches
     """
     input_fps = args['input_fps']
-    folder = '%s/.xpress' % dirname(input_fps[0])
+    folder = '%s/.xpress' % dirname(abspath(input_fps[0]))
     base = hashlib.sha224(''.join(input_fps).encode()).hexdigest()
     progress = folder + '/' + base
     return progress
