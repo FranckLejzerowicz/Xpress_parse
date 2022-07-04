@@ -209,10 +209,10 @@ def user_interact(
         (bool, list) for whether to keep the record and with what labels
     """
     query = get_query(labels)
-    ret = input('record#%s (%s/%s):\n%s\n%s et al. %s\n%s\n%s\n\n%s' % (
+    ret = input('record#%s (%s/%s):\n%s\n%s et al. %s, %s\n%s\n%s\n\n%s' % (
         r, rdx, n,
         '=' * 21,
-        row['AU'].split(',')[0], row['TI'],
+        row['AU'].split(',')[0], row['PY'], row['TI'],
         '-' * 5,
         row['AB'],
         query
